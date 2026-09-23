@@ -59,7 +59,7 @@ $$S_j = \frac{\partial Y / Y_0}{\partial \theta_j / \theta_j} \approx \frac{Y_{u
 
 Ten parameters were tested against six outputs spanning perfusion (mean aortic pressure, CO), pressure waveform (systolic and diastolic $P_a$) and cardiac mechanics (SV, EF). Parameters with $|S_j| < 0.1$ were fixed at literature values; the rest became candidates for tuning.
 
-![Sensitivity coefficients at the healthy baseline](figures/sensitivity_heatmap.png)
+![Sensitivity coefficients at the healthy baseline](figures/Sensitivity_heatmap.png)
 *Fig. 1 — Dimensionless sensitivity coefficients $S_j$ at the healthy baseline. Red indicates positive sensitivity (parameter ↑ → output ↑); blue indicates negative.*
 
 At the healthy baseline $C_{LV}$, $TPR$ and HR dominate, while $E_{max}$ is only moderately influential. Six parameters cleared the threshold: $C_{LV}$, $TPR$, $E_{max}$, $C_V$, $C_a$ and $\delta_P$. HR was treated as a measured input rather than a tuning parameter, since it is continuously available at the bedside, and $L$, $R_V$ and $R_{AV}$ were fixed.
