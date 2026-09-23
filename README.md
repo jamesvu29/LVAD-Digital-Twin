@@ -5,6 +5,8 @@ Supervisor: Dr Michael Stevens
 
 Supplementary material for the thesis poster. This page holds the figures and detail that didn't fit on the A1 sheet, plus the MATLAB/Simulink code that produced them.
 
+Full repository of model and code is found via: https://github.com/unsw-edu-au/NumericalModel. However, users will need UNSW permission to access the repo.
+
 **Contents:** [Overview](#overview) · [Model](#model) · [Sensitivity analysis](#sensitivity-analysis) · [Healthy calibration](#healthy-baseline-calibration) · [Heart failure calibration](#congestive-heart-failure-calibration) · [Digital shadow](#from-model-to-digital-shadow) · [Repository](#repository) · [References](#references)
 
 ---
