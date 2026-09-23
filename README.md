@@ -59,7 +59,7 @@ $$S_j = \frac{\partial Y / Y_0}{\partial \theta_j / \theta_j} \approx \frac{Y_{u
 
 Ten parameters were tested against six outputs spanning perfusion (mean aortic pressure, CO), pressure waveform (systolic and diastolic $P_a$) and cardiac mechanics (SV, EF). Parameters with $|S_j| < 0.1$ were fixed at literature values; the rest became candidates for tuning.
 
-![Sensitivity coefficients at the healthy baseline](figures/sensitivity-healthy.png)
+![Sensitivity coefficients at the healthy baseline](figures/sensitivity_heatmap.png)
 *Fig. 1 — Dimensionless sensitivity coefficients $S_j$ at the healthy baseline. Red indicates positive sensitivity (parameter ↑ → output ↑); blue indicates negative.*
 
 At the healthy baseline $C_{LV}$, $TPR$ and HR dominate, while $E_{max}$ is only moderately influential. Six parameters cleared the threshold: $C_{LV}$, $TPR$, $E_{max}$, $C_V$, $C_a$ and $\delta_P$. HR was treated as a measured input rather than a tuning parameter, since it is continuously available at the bedside, and $L$, $R_V$ and $R_{AV}$ were fixed.
@@ -100,7 +100,7 @@ with $w_i = 1$ for perfusion and pressure targets and $w_i = 0.5$ for SV and EF,
 
 All six outputs land within 5% of the reference.
 
-![LV pressure–volume loops, healthy baseline](figures/pv-loops-healthy.png)
+![LV pressure–volume loops, healthy baseline](figures/Healthy_PV_comparison.png)
 *Fig. 2 — LV PV loops at the healthy baseline. Red: Lim et al. Blue: calibrated simplified model.*
 
 Loop geometry agrees closely. The flattened systolic peak (about 15% lower) is structural: Wu's parabolic elastance cannot reproduce the sharp end-systolic stiffening of Lim's curvilinear ESPVR.
@@ -149,7 +149,7 @@ $E_{max}$ settled at 44.6% of its healthy value rather than Lim's 30%. In Lim's 
 | SV (mL) | 59.7 | 60.0 | −0.6% |
 | EF (%) | 37.3 | 37.0 | +0.7% |
 
-![LV pressure–volume loops, heart failure](figures/pv-loops-chf.png)
+![LV pressure–volume loops, heart failure](figures/CHF_PV_comparison.png)
 *Fig. 3 — LV PV loops in CHF, six-parameter calibration against Lim et al.*
 
 The better fit comes at a cost that is visible in the parameter drift from the healthy state. The fall in $E_{max}$ (−62%) and modest rise in $C_{LV}$ (+15%) match the contractile loss and dilation of heart failure, and $TPR$ and $C_V$ barely move. But arterial compliance rises 47%, when it is a wall property that should not change in the same patient, and pulmonary back-pressure falls 38%, when pulmonary congestion would push it up. Those two drifts are the optimiser compensating for model structure. The six-parameter calibration was adopted for consistency with the digital shadow, with this identifiability problem carried forward as the central issue the shadow had to address.
